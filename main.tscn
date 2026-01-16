@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://m3qbj21flsnh" path="res://icon.svg" id="1_ig7tw"]
 
-[sub_resource type="GDScript" id="GDScript_0xm2m"]
+[sub_resource type="GDScript" id="GDScript_ig7tw"]
 script/source = "extends CharacterBody2D
 
 
@@ -30,16 +30,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 
 [node name="Main" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = SubResource("GDScript_0xm2m")
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = SubResource("GDScript_ig7tw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_h2yge")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(201, 108)
+shape = SubResource("RectangleShape2D_0xm2m")
 
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(274, 266)
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(218, 207)
 texture = ExtResource("1_ig7tw")
